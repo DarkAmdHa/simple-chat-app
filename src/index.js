@@ -96,7 +96,7 @@ const e = require("express");
 
 var networkInterfaces = os.networkInterfaces();
 
-const localIPv4Address = networkInterfaces["Wi-Fi"].find((ip) => {
+const localIPv4Address = networkInterfaces["Wi-Fi"]?.find((ip) => {
   if (ip.family === "IPv4") {
     return ip;
   }
